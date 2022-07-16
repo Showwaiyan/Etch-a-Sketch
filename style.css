@@ -135,10 +135,10 @@ header h1{
 
 
 /* *color choose */
-input[type="radio"] {   
+#color-choose input[type="radio"] {   
     display: none;
 }
-input[type="radio"]:checked + label{
+#color-choose input[type="radio"]:checked + label{
     color: #DCD7C9;
 
     background-color: #2C3639;
@@ -162,6 +162,8 @@ input[type="radio"]:checked + label{
     border-color: #2C3639;
 
     padding: 5px;
+    
+    transition: 0.2s;
 }
 .background-color:hover {
     transform: scale(1.1);
@@ -181,7 +183,43 @@ input[type="radio"]:checked + label{
     border-color: #2C3639;
 
     padding: 5px;
+
+    transition: 0.2s;
 }
 .pen-color:hover {
     transform: scale(1.1);
+}
+
+/* *remove color */
+#remove-color {
+    margin-top: 10px;
+}
+#remove-color input[type="checkbox"] {
+    display: none;
+}
+#remove-color form input[type="checkbox"]:checked + label{
+    border-color: #DCD7C9;
+    color: #DCD7C9;
+
+    background-color: #4B5D67;
+}
+#remove-color form label{
+    display: block;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #DCD7C9;
+
+    border-style: solid;
+    border-color: #2C3639;
+    border-radius: 5px;
+}
+#remove-color form label img {
+    height: 22px;
+    margin-right: 10px;
+}
+#remove-color form label strong {
+   font-weight: 550; 
 }

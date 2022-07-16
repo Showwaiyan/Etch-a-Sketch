@@ -15,7 +15,6 @@ const colorPicker = new iro.ColorPicker('#color-picker',
 
 let colorMode = "pencolor"
 let currentPenColor = "white"; // *default white
-let currenBgColor = document.getElementById('background-layer').style.backgroundColor // *default background color
 
 bordInit(16);
 
@@ -29,6 +28,12 @@ document.getElementsByName("color-select").forEach((inPut)=>{
     inPut.addEventListener('click',function() {
         if (inPut.checked) colorMode = inPut.value;
     })
+})
+
+document.getElementById('remove-color-box').addEventListener('click',(e)=> {
+    if (e.target.checked) currentPenColor = document.getElementById('background-layer').
+                                            style.backgroundColor;
+    else currentPenColor = colorPicker.color.hexString;
 })
 
 colorPicker.on('color:change', (color)=>{
