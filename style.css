@@ -20,11 +20,6 @@ body {
 
 /* *board */
 main#board {
-    border-width: 5px;
-    border-style: solid;
-    border-color: #DCD7C9;
-    border-radius: 1.5%;
-
     height: 600px;
     width: 600px;
 
@@ -40,7 +35,7 @@ main#board {
 
     margin-top: 10px;
 
-    z-index: 3;
+    z-index: 0;
 }
 main div:hover:not(.background) {
     border-width: 1px;
@@ -49,7 +44,12 @@ main div:hover:not(.background) {
 
     box-shadow: 0px 0px 5px #F0EBE3;
 }
-main .background {
+main #background-layer {
+    border-width: 5px;
+    border-style: solid;
+    border-color: #DCD7C9;
+    border-radius: 1.5%;
+
     position: absolute;
     top: -5px;
     left: -5px;
@@ -104,6 +104,7 @@ header h1{
 
     width: 320px;
     display: flex;
+    flex-direction: column;
 
     padding: 20px;
     margin-top: 10px;
@@ -114,7 +115,73 @@ header h1{
     border-radius: 5px;
 }
 .color-picker {
-    width: 320px;
-    display: flex;
-    justify-content: center;
+    align-items: center;
+
+    border-style: ridge;
+    border-width: 5px;
+    border-color: #DCD7C9;
+    border-radius: 3px;
+
+    position: relative;
+
+    height: 300px;
+}
+.IroColorPicker {
+    position: absolute;
+
+    right: 40px;
+    top: 10px;
+}
+
+
+/* *color choose */
+input[type="radio"] {   
+    display: none;
+}
+input[type="radio"]:checked + label{
+    color: #DCD7C9;
+
+    background-color: #2C3639;
+}
+
+#color-choose {
+    width: 250px;
+}
+.background-color {
+    display: inline-block;
+
+    font-size: 20px;
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+
+    background-color: #DCD7C9;
+
+    border-style: solid;
+    border-color: #2C3639;
+
+    padding: 5px;
+}
+.background-color:hover {
+    transform: scale(1.1);
+}
+.pen-color {
+    display: inline-block;
+
+    font-size: 20px;
+
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    background-color: #DCD7C9;
+
+    border-style: solid;
+    border-color: #2C3639;
+
+    padding: 5px;
+}
+.pen-color:hover {
+    transform: scale(1.1);
 }

@@ -25,11 +25,26 @@
     </header>
 
     <section id="tool">
-        <div id="color-picker" class="color-picker"></div>
+        <div id="color-picker" class="color-picker">
+            <div id="color-choose">
+                <form action="">
+                    <div class="background-color">
+                        <input type="radio" id="background-color-change" name="color-select" value="bgcolor">
+                        <label for="background-color-change">Background Color</label>
+                    </div>
+    
+                    <div class="pen-color">
+                        <input type="radio" id="pen-color-change" name="color-select" value="pencolor">
+                        <label for="pen-color-change">Pen Color</label>
+                    </div>   
+                </form>
+            </div>
+        </div>
+
     </section>
 
     <main id="board">
-        <div class="background"></div>
+        <div id="background-layer"></div>
     </main>
 
 
