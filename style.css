@@ -33,8 +33,6 @@ main#board {
     grid-row-start: 2;
     grid-row-end: 4;
 
-    margin-top: 10px;
-
     z-index: 0;
 }
 main div:hover:not(.background) {
@@ -51,11 +49,11 @@ main #background-layer {
     border-radius: 1.5%;
 
     position: absolute;
-    top: -5px;
-    left: -5px;
+    top: -4.9px;
+    left: -5.5px;
 
-    height: 600px;
-    width: 600px;
+    height: 610px;
+    width: 610px;
 
     background-color: rgba(228, 220, 207,0.3);
 
