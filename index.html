@@ -50,10 +50,21 @@
                 </label>
             </form>                                                                        
         </div>
+
+        <div id="reso-change">
+            <div id="size">
+                <span id="size-8" class="size-number">8bits</span>
+                <span id="size-16" class="size-number glow">16bits</span>
+                <span id="size-32" class="size-number">32bits</span>
+            </div>
+            <form action="">
+                <input type="range" min="0" max="100" step="50" value="50" id="board-size">
+            </form>
+        </div>
     </section>
 
     <main id="board">
-        <div id="background-layer"></div>
+        <div id="background-layer" class="background-layer"></div>
     </main>
 
 
