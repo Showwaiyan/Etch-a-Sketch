@@ -10,8 +10,6 @@ function boardInit(size) {
     board.style.gridTemplateRows = `repeat(${size},1fr)`;
     for (let i=0; i < size*size; i++) {
         const square = document.createElement('div');
-        //square.style.backgroundColor = "red"// document.getElementById('background-layer')
-        //.style.backgroundColor;
         board.appendChild(square);
     }
 }
